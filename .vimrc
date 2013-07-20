@@ -57,29 +57,31 @@ set tags=./tags;/
 "******************************
 "* Vundle config
 "******************************
-set nocompatible               " be iMproved
-filetype off     
+if version >= 500
+    set nocompatible               " be iMproved
+    filetype off     
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+    " let Vundle manage Vundle
+    " required! 
+    Bundle 'gmarik/vundle'
 
-" My Bundles here:
-"
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-sensible'
-Bundle 'Raimondi/delimitMate'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
+    " My Bundles here:
+    "
+    Bundle 'kien/ctrlp.vim'
+    Bundle 'Lokaltog/vim-powerline'
+    Bundle 'tpope/vim-sensible'
+    Bundle 'Raimondi/delimitMate'
+    Bundle 'tpope/vim-surround'
+    Bundle 'scrooloose/nerdtree'
 
-"Ctrlp setting
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-let g:ctrlp_root_markers = ['.ACMEROOT']
+    "Ctrlp setting
+    set runtimepath^=~/.vim/bundle/ctrlp.vim
+    let g:ctrlp_root_markers = ['.ACMEROOT']
 
-"nerdtree setting
-let mapleader = "\\"
-nmap <leader>nt :NERDTree<cr>
+    "nerdtree setting
+    let mapleader = "\\"
+    nmap <leader>nt :NERDTree<cr>
+endif
