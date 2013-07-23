@@ -57,8 +57,10 @@ if version >= 500
     Bundle 'Raimondi/delimitMate'
     Bundle 'tpope/vim-surround'
     Bundle 'scrooloose/nerdtree'
-    Bundle 'SirVer/ultisnips'
     Bundle 'ervandew/supertab'
+    if has("python")
+        Bundle 'SirVer/ultisnips'
+    endif
 
     "Ctrlp setting
     set runtimepath^=~/.vim/bundle/ctrlp.vim
